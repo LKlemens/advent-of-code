@@ -52,6 +52,7 @@ assert_eq() {
   local msg="${3-}"
 
   if [ "$expected" == "$actual" ]; then
+    log_success "passed!"
     return 0
   else
     [ "${#msg}" -gt 0 ] && log_failure "$expected == $actual :: $msg" || true
