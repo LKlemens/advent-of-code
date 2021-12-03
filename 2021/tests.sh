@@ -24,4 +24,12 @@ function day2 () {
   assert_eq $part2  900 "not equivalent!"
 }
 
+function day3 () {
+  part1=$(elixir day3.exs | head -1)
+  assert_eq $part1 198 "not equivalent!"
+  
+  # part2=$(elixir day3.exs | tail -1)
+  # assert_eq $part2  900 "not equivalent!"
+}
+
 eval $day
